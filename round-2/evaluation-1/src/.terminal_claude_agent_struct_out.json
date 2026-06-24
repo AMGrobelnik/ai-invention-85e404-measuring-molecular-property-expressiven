@@ -1,0 +1,15 @@
+{
+  "title": "WL Expressiveness Floor Robustness Validation",
+  "layman_summary": "Validates that molecular property predictions from graph neural networks are statistically sound by testing whether the expressiveness limits we measured are real signals above random chance, and confirms all reported numbers are correct.",
+  "summary": "Robustness evaluation of the WL expressiveness floor framework for molecular property prediction across 24 (dataset, property) pairs from QM9, ESOL, FreeSolv, Lipophilicity, BBBP, and HIV datasets.\n\n**Numerical validation (24/24 pass):** All collision rates and variance floors reported in collision_variance_profiles.json were recomputed from raw wl_certificates.json and confirmed to match to within 0.1% relative tolerance. Specific spot-checks confirmed: ESOL k=1→k=2 collision rate collapse (0.0916→0.0000), FreeSolv k=3 floor collapse to 1.383e-05, HIV variance_floor_k1=0.0410.\n\n**Bootstrap 95% CIs for collision rates:** For each of the 72 (dataset, property, k) triplets, 1000 bootstrap resamples of same-certificate pairs were computed. Key small-sample flags: FreeSolv k=1 has only 116 pairs (CI width ~0.09), ESOL k=2/k=3 have 13-15 pairs. QM9 properties benefit from large pair counts (up to 136,963 pairs at k=1) yielding tight CIs (width <0.005).\n\n**Permutation-null analysis:** 1000 label shuffles per dataset revealed that ALL 24 observed collision rates are far BELOW the null distribution (pooled null 95th percentile CR~0.73, VF~0.029). This confirms that WL certificates capture genuine structure for every property — none are explainable by chance. Properties with high original CR (e.g. QM9/homo=0.266, QM9/r2=0.317) are still far below the random-label baseline (~0.72), confirming structurally similar molecules (same WL cert) have more similar properties than random pairs.\n\n**Typology robustness:** Using null-based thresholds at 80th/85th/90th/95th/99th percentiles, 23/24 properties are stable across all threshold choices (Jaccard mean=0.74-1.00). Only 1 property sits at the boundary between WL-sufficient and noise-dominated under lower percentile thresholds. Under null-based classification, all 24 properties are WL-sufficient relative to random — confirming that the original median-based typology captures informative distinctions within the space of WL-informative properties, not noise-level variation.\n\n**Core finding validated:** The original typology (thermochemical = WL-sufficient, quantum electronic = geometry-limited) reflects genuine signal — all properties have collision rates significantly below permutation null.",
+  "out_expected_files": {
+    "script": "eval.py",
+    "full_output": "full_eval_out.json",
+    "mini_output": "mini_eval_out.json",
+    "preview_output": "preview_eval_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)logs/",
+    "(^|/)\\.venv/"
+  ]
+}

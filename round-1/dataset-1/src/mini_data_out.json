@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "description": "MoleculeNet + QM9 molecular property datasets for WL expressiveness analysis",
+    "num_datasets": 5,
+    "total_examples": 102125,
+    "domain": "molecular_property_prediction"
+  },
+  "datasets": [
+    {
+      "dataset": "QM9_Properties",
+      "examples": [
+        {
+          "input": "C",
+          "output": "{\"homo\": -0.3877, \"lumo\": 0.1171, \"gap\": 0.5048, \"dipole_moment\": 0.0, \"polarizability\": 13.21}",
+          "metadata_smiles": "C",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "N",
+          "output": "{\"homo\": -0.257, \"lumo\": 0.0829, \"gap\": 0.3399, \"dipole_moment\": 1.6256, \"polarizability\": 9.46}",
+          "metadata_smiles": "N",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "O",
+          "output": "{\"homo\": -0.2928, \"lumo\": 0.0687, \"gap\": 0.3615, \"dipole_moment\": 1.8511, \"polarizability\": 6.31}",
+          "metadata_smiles": "O",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_HIV",
+      "examples": [
+        {
+          "input": "CCC1=[O+][Cu-3]2([O+]=C(CC)C1)[O+]=C(CC)CC(CC)=[O+]2",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "CCC1=[O+][Cu-3]2([O+]=C(CC)C1)[O+]=C(CC)CC(CC)=[O+]2",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 0,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "C(=Cc1ccccc1)C1=[O+][Cu-3]2([O+]=C(C=Cc3ccccc3)CC(c3ccccc3)=[O+]2)[O+]=C(c2ccccc2)C1",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "C(=Cc1ccccc1)C1=[O+][Cu-3]2([O+]=C(C=Cc3ccccc3)CC(c3ccccc3)=[O+]2)[O+]=C(c2ccccc2)C1",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 1,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "CC(=O)N1c2ccccc2Sc2c1ccc1ccccc21",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "CC(=O)N1c2ccccc2Sc2c1ccc1ccccc21",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 2,
+          "metadata_n_classes": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_ESOL",
+      "examples": [
+        {
+          "input": "OCC3OC(OCC2OC(OC(C#N)c1ccccc1)C(O)C(O)C2O)C(O)C(O)C3O",
+          "output": "{\"label\": -0.77}",
+          "metadata_smiles": "OCC3OC(OCC2OC(OC(C#N)c1ccccc1)C(O)C(O)C2O)C(O)C(O)C3O",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "Cc1occc1C(=O)Nc2ccccc2",
+          "output": "{\"label\": -3.3}",
+          "metadata_smiles": "Cc1occc1C(=O)Nc2ccccc2",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "CC(C)=CCCC(C)=CC(=O)",
+          "output": "{\"label\": -2.06}",
+          "metadata_smiles": "CC(C)=CCCC(C)=CC(=O)",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_BBBP",
+      "examples": [
+        {
+          "input": "[Cl].CC(C)NCC(O)COc1cccc2ccccc12",
+          "output": "{\"label\": 1}",
+          "metadata_smiles": "[Cl].CC(C)NCC(O)COc1cccc2ccccc12",
+          "metadata_dataset": "MoleculeNet_BBBP",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 0,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "C(=O)(OC(C)(C)C)CCCc1ccc(cc1)N(CCCl)CCCl",
+          "output": "{\"label\": 1}",
+          "metadata_smiles": "C(=O)(OC(C)(C)C)CCCc1ccc(cc1)N(CCCl)CCCl",
+          "metadata_dataset": "MoleculeNet_BBBP",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 1,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "c12c3c(N4CCN(C)CC4)c(F)cc1c(c(C(O)=O)cn2C(C)CO3)=O",
+          "output": "{\"label\": 1}",
+          "metadata_smiles": "c12c3c(N4CCN(C)CC4)c(F)cc1c(c(C(O)=O)cn2C(C)CO3)=O",
+          "metadata_dataset": "MoleculeNet_BBBP",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 2,
+          "metadata_n_classes": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_Tox21",
+      "examples": [
+        {
+          "input": "CCOc1ccc2nc(S(N)(=O)=O)sc2c1",
+          "output": "{\"NR-AR\": 0.0, \"NR-AR-LBD\": 0.0, \"NR-AhR\": 1.0, \"NR-ER-LBD\": 0.0, \"NR-PPAR-gamma\": 0.0, \"SR-ARE\": 1.0, \"SR-ATAD5\": 0.0, \"SR-HSE\": 0.0, \"SR-MMP\": 0.0, \"SR-p53\": 0.0}",
+          "metadata_smiles": "CCOc1ccc2nc(S(N)(=O)=O)sc2c1",
+          "metadata_dataset": "MoleculeNet_Tox21",
+          "metadata_task_type": "multi_label_classification",
+          "metadata_label_names": "[\"NR-AR\", \"NR-AR-LBD\", \"NR-AhR\", \"NR-Aromatase\", \"NR-ER\", \"NR-ER-LBD\", \"NR-PPAR-gamma\", \"SR-ARE\", \"SR-ATAD5\", \"SR-HSE\", \"SR-MMP\", \"SR-p53\"]",
+          "metadata_row_index": 0,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "CCN1C(=O)NC(c2ccccc2)C1=O",
+          "output": "{\"NR-AR\": 0.0, \"NR-AR-LBD\": 0.0, \"NR-AhR\": 0.0, \"NR-Aromatase\": 0.0, \"NR-ER\": 0.0, \"NR-ER-LBD\": 0.0, \"NR-PPAR-gamma\": 0.0, \"SR-ATAD5\": 0.0, \"SR-MMP\": 0.0, \"SR-p53\": 0.0}",
+          "metadata_smiles": "CCN1C(=O)NC(c2ccccc2)C1=O",
+          "metadata_dataset": "MoleculeNet_Tox21",
+          "metadata_task_type": "multi_label_classification",
+          "metadata_label_names": "[\"NR-AR\", \"NR-AR-LBD\", \"NR-AhR\", \"NR-Aromatase\", \"NR-ER\", \"NR-ER-LBD\", \"NR-PPAR-gamma\", \"SR-ARE\", \"SR-ATAD5\", \"SR-HSE\", \"SR-MMP\", \"SR-p53\"]",
+          "metadata_row_index": 1,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "CC[C@]1(O)CC[C@H]2[C@@H]3CCC4=CCCC[C@@H]4[C@H]3CC[C@@]21C",
+          "output": "{\"SR-ARE\": 0.0, \"SR-HSE\": 0.0}",
+          "metadata_smiles": "CC[C@]1(O)CC[C@H]2[C@@H]3CCC4=CCCC[C@@H]4[C@H]3CC[C@@]21C",
+          "metadata_dataset": "MoleculeNet_Tox21",
+          "metadata_task_type": "multi_label_classification",
+          "metadata_label_names": "[\"NR-AR\", \"NR-AR-LBD\", \"NR-AhR\", \"NR-Aromatase\", \"NR-ER\", \"NR-ER-LBD\", \"NR-PPAR-gamma\", \"SR-ARE\", \"SR-ATAD5\", \"SR-HSE\", \"SR-MMP\", \"SR-p53\"]",
+          "metadata_row_index": 2,
+          "metadata_n_classes": 2
+        }
+      ]
+    }
+  ]
+}

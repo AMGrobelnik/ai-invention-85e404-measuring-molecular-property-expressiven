@@ -1,0 +1,796 @@
+{
+  "properties": [
+    {
+      "property_name": "p_np",
+      "dataset": "BBBP",
+      "n_molecules": 2039,
+      "total_variance": 0.17973210478070947,
+      "std_dev": 0.4239482336096112,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.14285714285714285,
+          "variance_explained": 0.9797620800099923,
+          "variance_floor": 0.02023791999000768,
+          "n_collision_groups": 94,
+          "total_pairs": 119
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.14893617021276595,
+          "variance_explained": 0.9818086112449369,
+          "variance_floor": 0.018191388755063084,
+          "n_collision_groups": 80,
+          "total_pairs": 94
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.15053763440860216,
+          "variance_explained": 0.9818086112449369,
+          "variance_floor": 0.018191388755063084,
+          "n_collision_groups": 79,
+          "total_pairs": 93
+        }
+      ]
+    },
+    {
+      "property_name": "measured log solubility in mols per litre",
+      "dataset": "ESOL",
+      "n_molecules": 1128,
+      "total_variance": 4.391169412478466,
+      "std_dev": 2.0955117304559443,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.09157509157509157,
+          "variance_explained": 0.9956961745204147,
+          "variance_floor": 0.00430382547958531,
+          "n_collision_groups": 106,
+          "total_pairs": 273
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9997507141335699,
+          "variance_floor": 0.0002492858664301361,
+          "n_collision_groups": 15,
+          "total_pairs": 15
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9998817937134667,
+          "variance_floor": 0.00011820628653319565,
+          "n_collision_groups": 13,
+          "total_pairs": 13
+        }
+      ]
+    },
+    {
+      "property_name": "expt",
+      "dataset": "FreeSolv",
+      "n_molecules": 642,
+      "total_variance": 14.782657785007908,
+      "std_dev": 3.8448222046029525,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.06896551724137931,
+          "variance_explained": 0.9942735479697562,
+          "variance_floor": 0.005726452030243827,
+          "n_collision_groups": 61,
+          "total_pairs": 116
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999861650633513,
+          "variance_floor": 1.383493664879403e-05,
+          "n_collision_groups": 3,
+          "total_pairs": 3
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999861650633513,
+          "variance_floor": 1.383493664879403e-05,
+          "n_collision_groups": 3,
+          "total_pairs": 3
+        }
+      ]
+    },
+    {
+      "property_name": "HIV_active",
+      "dataset": "HIV",
+      "n_molecules": 4998,
+      "total_variance": 0.035644710064898305,
+      "std_dev": 0.18879806689926226,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.07488986784140969,
+          "variance_explained": 0.9590238150055311,
+          "variance_floor": 0.040976184994468826,
+          "n_collision_groups": 148,
+          "total_pairs": 227
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 1.0,
+          "variance_floor": 0.0,
+          "n_collision_groups": 4,
+          "total_pairs": 4
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 1.0,
+          "variance_floor": 0.0,
+          "n_collision_groups": 1,
+          "total_pairs": 1
+        }
+      ]
+    },
+    {
+      "property_name": "exp",
+      "dataset": "Lipophilicity",
+      "n_molecules": 4200,
+      "total_variance": 1.4468733587244897,
+      "std_dev": 1.2028604901336188,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.1092436974789916,
+          "variance_explained": 0.9962628858152812,
+          "variance_floor": 0.0037371141847187504,
+          "n_collision_groups": 237,
+          "total_pairs": 357
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.024390243902439025,
+          "variance_explained": 0.9994155500929636,
+          "variance_floor": 0.0005844499070364195,
+          "n_collision_groups": 90,
+          "total_pairs": 123
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.017094017094017096,
+          "variance_explained": 0.9995209662364043,
+          "variance_floor": 0.00047903376359573245,
+          "n_collision_groups": 84,
+          "total_pairs": 117
+        }
+      ]
+    },
+    {
+      "property_name": "A",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 8766963.871174112,
+      "std_dev": 2960.905920689496,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999559382401,
+          "variance_floor": 4.40617598879713e-08,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999978245467,
+          "variance_floor": 2.175453233315119e-09,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.999999999520185,
+          "variance_floor": 4.798149704686053e-10,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "B",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 6.4397597243450395,
+      "std_dev": 2.5376681667123147,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.003380475018800698,
+          "variance_explained": 0.9937430151304544,
+          "variance_floor": 0.006256984869545578,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.014621008080030782,
+          "variance_explained": 0.999380391945649,
+          "variance_floor": 0.0006196080543510111,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.03341288782816229,
+          "variance_explained": 0.9998513991909597,
+          "variance_floor": 0.00014860080904033438,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "C",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 3.0748920179639687,
+      "std_dev": 1.753537002165614,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.00796565495790834,
+          "variance_explained": 0.9953166040238078,
+          "variance_floor": 0.004683395976192137,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.028087726048480186,
+          "variance_explained": 0.9992752492276665,
+          "variance_floor": 0.0007247507723334804,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.07398568019093078,
+          "variance_explained": 0.9997483092398486,
+          "variance_floor": 0.00025169076015140325,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "alpha",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 75.420701149991,
+      "std_dev": 8.684509263625147,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.007257434489606682,
+          "variance_explained": 0.9928921876383515,
+          "variance_floor": 0.007107812361648485,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.006925740669488265,
+          "variance_explained": 0.9995427426100565,
+          "variance_floor": 0.00045725738994352607,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.014319809069212411,
+          "variance_explained": 0.9998840202946058,
+          "variance_floor": 0.00011597970539420054,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "cv",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 12.350375807889723,
+      "std_dev": 3.514310146798333,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.15891153085139784,
+          "variance_explained": 0.9798163365312642,
+          "variance_floor": 0.020183663468735753,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.24778761061946902,
+          "variance_explained": 0.996207502814578,
+          "variance_floor": 0.003792497185421971,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.37708830548926014,
+          "variance_explained": 0.9989312142641116,
+          "variance_floor": 0.0010687857358883692,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "g298",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 1885.6891920095402,
+      "std_dev": 43.42452293358604,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999236561606,
+          "variance_floor": 7.63438393653462e-08,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999913841436,
+          "variance_floor": 8.615856326936511e-09,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999981793484,
+          "variance_floor": 1.8206516421982705e-09,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "g298_atom",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 40351.36769916364,
+      "std_dev": 200.87649862331742,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.00010221738717755891,
+          "variance_explained": 0.998595163548656,
+          "variance_floor": 0.001404836451344062,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9998414558512089,
+          "variance_floor": 0.00015854414879108396,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999664973911003,
+          "variance_floor": 3.3502608899703525e-05,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "gap",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 0.002317051550115996,
+      "std_dev": 0.04813576165509377,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.16363543438738928,
+          "variance_explained": 0.9613842986109045,
+          "variance_floor": 0.038615701389095515,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.18391689111196613,
+          "variance_explained": 0.9967526227326559,
+          "variance_floor": 0.003247377267344109,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.2577565632458234,
+          "variance_explained": 0.9991640480175895,
+          "variance_floor": 0.0008359519824104476,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "h298",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 1885.6324423518336,
+      "std_dev": 43.42386949998622,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999202293468,
+          "variance_floor": 7.977065318934533e-08,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999906811662,
+          "variance_floor": 9.318833868771191e-09,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999979839658,
+          "variance_floor": 2.0160342536835025e-09,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "h298_atom",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 48873.15419950452,
+      "std_dev": 221.07273508848738,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 2.190372582376262e-05,
+          "variance_explained": 0.9987880917573975,
+          "variance_floor": 0.0012119082426025245,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9998584244816173,
+          "variance_floor": 0.0001415755183826924,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999693715867712,
+          "variance_floor": 3.062841322871214e-05,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "homo",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 0.0006827861709934361,
+      "std_dev": 0.026130177400726467,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.2655534706453568,
+          "variance_explained": 0.9500175530871652,
+          "variance_floor": 0.04998244691283483,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.2978068487879954,
+          "variance_explained": 0.9937865893102694,
+          "variance_floor": 0.006213410689730537,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.3914081145584726,
+          "variance_explained": 0.9983100683312691,
+          "variance_floor": 0.001689931668730922,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "lumo",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 0.0022054115308124,
+      "std_dev": 0.04696180927958803,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0744434628330279,
+          "variance_explained": 0.9737319509249294,
+          "variance_floor": 0.026268049075070576,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.04078491727587533,
+          "variance_explained": 0.9989016764357074,
+          "variance_floor": 0.0010983235642926415,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.07875894988066826,
+          "variance_explained": 0.9997221440451792,
+          "variance_floor": 0.0002778559548207933,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "mu",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 2.3455261290773723,
+      "std_dev": 1.531511060710099,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.2672181538079627,
+          "variance_explained": 0.8531362519598651,
+          "variance_floor": 0.14686374804013494,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.23278183916891113,
+          "variance_explained": 0.9934624552679707,
+          "variance_floor": 0.006537544732029256,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.2720763723150358,
+          "variance_explained": 0.9983633177870814,
+          "variance_floor": 0.0016366822129185634,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "r2",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 57783.97931128712,
+      "std_dev": 240.3829846542536,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.316771682863255,
+          "variance_explained": 0.9131413920892972,
+          "variance_floor": 0.08685860791070271,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.31242785686802615,
+          "variance_explained": 0.98877506413724,
+          "variance_floor": 0.011224935862759983,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.315035799522673,
+          "variance_explained": 0.9969985342048326,
+          "variance_floor": 0.003001465795167388,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "u0",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 1885.6484505106512,
+      "std_dev": 43.42405382401154,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999214686551,
+          "variance_floor": 7.853134484743716e-08,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999909441745,
+          "variance_floor": 9.055825538326812e-09,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999980550452,
+          "variance_floor": 1.9449547894818185e-09,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "u0_atom",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 47386.48796281007,
+      "std_dev": 217.68437693782727,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 2.190372582376262e-05,
+          "variance_explained": 0.9987694786332959,
+          "variance_floor": 0.0012305213667041317,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9998581026870264,
+          "variance_floor": 0.0001418973129736141,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999695241634995,
+          "variance_floor": 3.0475836500465906e-05,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "u298",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 1885.63244241116,
+      "std_dev": 43.423869500669326,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.999999920229366,
+          "variance_floor": 7.977063402118832e-08,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999906811722,
+          "variance_floor": 9.318827778236658e-09,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999999979839673,
+          "variance_floor": 2.0160326280649467e-09,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "u298_atom",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 48224.137202580336,
+      "std_dev": 219.59994809330064,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 2.190372582376262e-05,
+          "variance_explained": 0.9987717817752331,
+          "variance_floor": 0.0012282182247668751,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9998565192034495,
+          "variance_floor": 0.00014348079655041108,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999689594040978,
+          "variance_floor": 3.1040595902196695e-05,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    },
+    {
+      "property_name": "zpve",
+      "dataset": "QM9",
+      "n_molecules": 50000,
+      "total_variance": 0.000858412528790091,
+      "std_dev": 0.02929867793587436,
+      "k_profiles": [
+        {
+          "k": 1,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9995977788467437,
+          "variance_floor": 0.0004022211532563291,
+          "n_collision_groups": 9423,
+          "total_pairs": 136963
+        },
+        {
+          "k": 2,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999312486367181,
+          "variance_floor": 6.875136328186917e-05,
+          "n_collision_groups": 1455,
+          "total_pairs": 2599
+        },
+        {
+          "k": 3,
+          "collision_rate": 0.0,
+          "variance_explained": 0.9999813812276779,
+          "variance_floor": 1.8618772322122356e-05,
+          "n_collision_groups": 325,
+          "total_pairs": 419
+        }
+      ]
+    }
+  ]
+}

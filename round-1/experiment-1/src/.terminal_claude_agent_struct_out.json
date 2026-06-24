@@ -1,0 +1,16 @@
+{
+  "title": "WL Expressiveness Floor for Molecular Properties",
+  "layman_summary": "Measures how well graph fingerprints (k-WL, k=1,2,3) distinguish molecules with different properties, revealing which molecular targets hit a graph-expressiveness ceiling and which benefit from more powerful GNNs.",
+  "summary": "Computed k-WL (k=1,2,3) graph certificates for 63,007 molecules (50K QM9 + 13K MoleculeNet: ESOL, FreeSolv, Lipophilicity, BBBP, HIV). For each (dataset, property) pair, measured: (1) collision rate = fraction of same-certificate molecule pairs whose property values differ by >0.5σ (meaningful disagreement), and (2) conditional variance floor = E[Var(y|WL_k)] / Var(y), the Bayes error lower bound for any WL_k-based predictor.\n\nKey findings across 24 properties:\n- WL-bottlenecked (2 props): FreeSolv/expt, HIV/HIV_active — high k=1 collision rate but near-zero k=3 variance floor; higher-k GNNs should help.\n- 3D-geometry-limited (10 props): QM9 electronic properties (HOMO, LUMO, mu, gap, r2, cv, alpha) + MoleculeNet pharmacokinetic (BBBP, ESOL, Lipophilicity) — high collision rate persists with residual variance even at k=3, indicating 3D conformation dominates.\n- WL-sufficient (10 props): QM9 thermochemical energies (u0, u298, h298, g298, zpve, A, g298_atom, h298_atom, u0_atom, u298_atom) — near-zero k=1 collision rate; 1-WL GINs already near-optimal.\n- Noise-dominated (2 props): QM9/B, QM9/alpha — low collision but above-median residual variance floor.\n\nThresholds (adaptive, median-based): collision_rate_k1=0.0076, variance_floor_k3=7.47e-5.\n\nAll QM9 quantum electronic properties (HOMO cr1=0.266, LUMO cr1=0.074, mu cr1=0.267) show high collision rates at k=1, confirming that 1-WL GNNs hit an expressiveness ceiling for these targets. Thermochemical energies (u0, h298, g298) have cr1≈0 and vf3≈0, meaning topology fully determines them — consistent with molecular formula dominance.\n\nOutput files: collision_variance_profiles.json (24 property profiles with k=1,2,3 metrics), typology_matrix.json (2×2 quadrant assignments with reasoning), method_out.json (exp_gen_sol_out schema, validated). WL implementation uses SHA256-based deterministic hashing with hydrogen-explicit graphs. Monotonicity of variance floor (vf1 ≥ vf2 ≥ vf3) confirmed for all properties.",
+  "out_expected_files": {
+    "script": "method.py",
+    "full_output": "full_method_out.json",
+    "mini_output": "mini_method_out.json",
+    "preview_output": "preview_method_out.json"
+  },
+  "upload_ignore_regexes": [
+    "(^|/)cache/",
+    "(^|/)wl_certificates\\.json$",
+    "(^|/)\\.venv/"
+  ]
+}

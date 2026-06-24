@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "description": "MoleculeNet + QM9 molecular property datasets for WL expressiveness analysis",
+    "num_datasets": 5,
+    "total_examples": 102125,
+    "domain": "molecular_property_prediction"
+  },
+  "datasets": [
+    {
+      "dataset": "QM9_Properties",
+      "examples": [
+        {
+          "input": "C",
+          "output": "{\"homo\": -0.3877, \"lumo\": 0.1171, \"gap\": 0.5048, \"dipole_moment\": 0.0, \"polarizability\": 13.21}",
+          "metadata_smiles": "C",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "N",
+          "output": "{\"homo\": -0.257, \"lumo\": 0.0829, \"gap\": 0.3399, \"dipole_moment\": 1.6256, \"polarizability\": 9.46}",
+          "metadata_smiles": "N",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "O",
+          "output": "{\"homo\": -0.2928, \"lumo\": 0.0687, \"gap\": 0.3615, \"dipole_moment\": 1.8511, \"polarizability\": 6.31}",
+          "metadata_smiles": "O",
+          "metadata_dataset": "QM9_Properties",
+          "metadata_task_type": "multi_target_regression",
+          "metadata_label_names": "[\"homo\", \"lumo\", \"gap\", \"dipole_moment\", \"polarizability\"]",
+          "metadata_row_index": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_HIV",
+      "examples": [
+        {
+          "input": "CCC1=[O+][Cu-3]2([O+]=C(CC)C1)[O+]=C(CC)CC(CC)=[O+]2",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "CCC1=[O+][Cu-3]2([O+]=C(CC)C1)[O+]=C(CC)CC(CC)=[O+]2",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 0,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "C(=Cc1ccccc1)C1=[O+][Cu-3]2([O+]=C(C=Cc3ccccc3)CC(c3ccccc3)=[O+]2)[O+]=C(c2ccccc2)C1",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "C(=Cc1ccccc1)C1=[O+][Cu-3]2([O+]=C(C=Cc3ccccc3)CC(c3ccccc3)=[O+]2)[O+]=C(c2ccccc2)C1",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 1,
+          "metadata_n_classes": 2
+        },
+        {
+          "input": "CC(=O)N1c2ccccc2Sc2c1ccc1ccccc21",
+          "output": "{\"label\": 0}",
+          "metadata_smiles": "CC(=O)N1c2ccccc2Sc2c1ccc1ccccc21",
+          "metadata_dataset": "MoleculeNet_HIV",
+          "metadata_task_type": "binary_classification",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 2,
+          "metadata_n_classes": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MoleculeNet_ESOL",
+      "examples": [
+        {
+          "input": "OCC3OC(OCC2OC(OC(C#N)c1ccccc1)C(O)C(O)C2O)C(O)C(O)C3O",
+          "output": "{\"label\": -0.77}",
+          "metadata_smiles": "OCC3OC(OCC2OC(OC(C#N)c1ccccc1)C(O)C(O)C2O)C(O)C(O)C3O",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 0
+        },
+        {
+          "input": "Cc1occc1C(=O)Nc2ccccc2",
+          "output": "{\"label\": -3.3}",
+          "metadata_smiles": "Cc1occc1C(=O)Nc2ccccc2",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 1
+        },
+        {
+          "input": "CC(C)=CCCC(C)=CC(=O)",
+          "output": "{\"label\": -2.06}",
+          "metadata_smiles": "CC(C)=CCCC(C)=CC(=O)",
+          "metadata_dataset": "MoleculeNet_ESOL",
+          "metadata_task_type": "regression",
+          "metadata_label_names": "[\"label\"]",
+          "metadata_row_index": 2
+        }
+      ]
+    }
+  ]
+}

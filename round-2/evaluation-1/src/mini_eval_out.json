@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "evaluation_name": "WL Expressiveness Floor Robustness Validation",
+    "n_bootstrap": 1000,
+    "n_permutations": 1000,
+    "rng_seed": 42,
+    "collision_sigma_factor": 0.5,
+    "reference_null_percentile": 95,
+    "alternative_percentiles": [
+      80,
+      85,
+      90,
+      99
+    ],
+    "robustness_summary": {
+      "pct_80_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_85_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_90_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_95_counts": {
+        "WL-sufficient": 24
+      },
+      "pct_99_counts": {
+        "WL-sufficient": 24
+      },
+      "jaccard_indices": {
+        "80": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "85": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "90": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "99": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 1.0,
+            "noise-dominated": 1.0
+          },
+          "mean": 1.0
+        }
+      },
+      "unstable_properties": {
+        "('BBBP', 'p_np')": {
+          "reference": "WL-sufficient",
+          "changes": {
+            "80": "noise-dominated",
+            "85": "noise-dominated",
+            "90": "noise-dominated"
+          }
+        }
+      },
+      "thresholds_by_percentile": {
+        "80": {
+          "cr_k1": 0.7144849338872542,
+          "vf_k3": 0.0080375222973928
+        },
+        "85": {
+          "cr_k1": 0.717948717948718,
+          "vf_k3": 0.008425088400198408
+        },
+        "90": {
+          "cr_k1": 0.7251454772456795,
+          "vf_k3": 0.014432827175518194
+        },
+        "95": {
+          "cr_k1": 0.7299931368325753,
+          "vf_k3": 0.028818718213070086
+        },
+        "99": {
+          "cr_k1": 0.7507002801120448,
+          "vf_k3": 0.04866651276698176
+        }
+      }
+    }
+  },
+  "metrics_agg": {
+    "n_properties_total": 24.0,
+    "n_numerical_validated": 24.0,
+    "numerical_validation_rate": 1.0,
+    "n_cr_k1_significant_above_null95": 0.0,
+    "n_vf_k3_significant_above_null95": 0.0,
+    "fraction_cr_significant": 0.0,
+    "fraction_vf_significant": 0.0,
+    "mean_bootstrap_ci_width_k1": 0.018185302373077458,
+    "n_properties_changing_quadrant": 1.0,
+    "fraction_stable_quadrant": 0.9583333333333334,
+    "mean_jaccard_95th_vs_80th": 0.7395833333333334,
+    "mean_jaccard_95th_vs_99th": 1.0,
+    "null_cr_k1_95th_threshold": 0.7299931368325753,
+    "null_vf_k3_95th_threshold": 0.028818718213070086,
+    "orig_cr_k1_median_threshold": 0.007611544723757511,
+    "orig_vf_k3_median_threshold": 7.474115714695203e-05,
+    "n_wl_bottlenecked_null95": 0.0,
+    "n_3d_geometry_limited_null95": 0.0,
+    "n_wl_sufficient_null95": 24.0,
+    "n_noise_dominated_null95": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "BBBP",
+      "examples": [
+        {
+          "input": "Dataset: BBBP | Property: p_np | N molecules: 2039",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.1429 CI=[0.0840,0.2101] n_pairs=119\n  k=2: CR=0.1489 CI=[0.0851,0.2128] n_pairs=94\n  k=3: CR=0.1505 CI=[0.0860,0.2258] n_pairs=93\nNumerical validation: PASS\n  k=1: CR 0.142857→0.142857, VF 2.02e-02→2.02e-02\n  k=2: CR 0.148936→0.148936, VF 1.82e-02→1.82e-02\n  k=3: CR 0.150538→0.150538, VF 1.82e-02→1.82e-02\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: noise-dominated\n  @85th pct: noise-dominated\n  @90th pct: noise-dominated\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): 3D-geometry-limited",
+          "metadata_dataset": "BBBP",
+          "metadata_property": "p_np",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "False",
+          "eval_cr_k1_point": 0.14285714285714285,
+          "eval_cr_k1_ci_lo": 0.08403361344537816,
+          "eval_cr_k1_ci_hi": 0.21008403361344538,
+          "eval_cr_k1_ci_width": 0.12605042016806722,
+          "eval_vf_k3": 0.018191388755063084,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 3.0
+        }
+      ]
+    },
+    {
+      "dataset": "ESOL",
+      "examples": [
+        {
+          "input": "Dataset: ESOL | Property: measured log solubility in mols per litre | N molecules: 1128",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0916 CI=[0.0586,0.1245] n_pairs=273\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=15\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=13\nNumerical validation: PASS\n  k=1: CR 0.091575→0.091575, VF 4.30e-03→4.30e-03\n  k=2: CR 0.000000→0.000000, VF 2.49e-04→2.49e-04\n  k=3: CR 0.000000→0.000000, VF 1.18e-04→1.18e-04\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): 3D-geometry-limited",
+          "metadata_dataset": "ESOL",
+          "metadata_property": "measured log solubility in mols per litre",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.09157509157509157,
+          "eval_cr_k1_ci_lo": 0.05860805860805861,
+          "eval_cr_k1_ci_hi": 0.12454212454212454,
+          "eval_cr_k1_ci_width": 0.06593406593406594,
+          "eval_vf_k3": 0.00011820628653319565,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "FreeSolv",
+      "examples": [
+        {
+          "input": "Dataset: FreeSolv | Property: expt | N molecules: 642",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0690 CI=[0.0259,0.1121] n_pairs=116\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=3\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=3\nNumerical validation: PASS\n  k=1: CR 0.068966→0.068966, VF 5.73e-03→5.73e-03\n  k=2: CR 0.000000→0.000000, VF 1.38e-05→1.38e-05\n  k=3: CR 0.000000→0.000000, VF 1.38e-05→1.38e-05\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=0.9990 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): WL-bottlenecked",
+          "metadata_dataset": "FreeSolv",
+          "metadata_property": "expt",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "WL-bottlenecked",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.06896551724137931,
+          "eval_cr_k1_ci_lo": 0.02586206896551724,
+          "eval_cr_k1_ci_hi": 0.11206896551724138,
+          "eval_cr_k1_ci_width": 0.08620689655172414,
+          "eval_vf_k3": 1.383493664879403e-05,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 0.999,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "HIV",
+      "examples": [
+        {
+          "input": "Dataset: HIV | Property: HIV_active | N molecules: 4998",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0749 CI=[0.0439,0.1101] n_pairs=227\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=4\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=1\nNumerical validation: PASS\n  k=1: CR 0.074890→0.074890, VF 4.10e-02→4.10e-02\n  k=2: CR 0.000000→0.000000, VF 0.00e+00→0.00e+00\n  k=3: CR 0.000000→0.000000, VF 0.00e+00→0.00e+00\nSignificance (null 95th):\n  CR_k1: p=0.4740 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): WL-bottlenecked",
+          "metadata_dataset": "HIV",
+          "metadata_property": "HIV_active",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "WL-bottlenecked",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.07488986784140969,
+          "eval_cr_k1_ci_lo": 0.04394273127753305,
+          "eval_cr_k1_ci_hi": 0.11013215859030837,
+          "eval_cr_k1_ci_width": 0.06618942731277531,
+          "eval_vf_k3": 0.0,
+          "eval_cr_k1_p_value": 0.474,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "Lipophilicity",
+      "examples": [
+        {
+          "input": "Dataset: Lipophilicity | Property: exp | N molecules: 4200",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.1092 CI=[0.0784,0.1429] n_pairs=357\n  k=2: CR=0.0244 CI=[0.0000,0.0569] n_pairs=123\n  k=3: CR=0.0171 CI=[0.0000,0.0427] n_pairs=117\nNumerical validation: PASS\n  k=1: CR 0.109244→0.109244, VF 3.74e-03→3.74e-03\n  k=2: CR 0.024390→0.024390, VF 5.84e-04→5.84e-04\n  k=3: CR 0.017094→0.017094, VF 4.79e-04→4.79e-04\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): 3D-geometry-limited",
+          "metadata_dataset": "Lipophilicity",
+          "metadata_property": "exp",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.1092436974789916,
+          "eval_cr_k1_ci_lo": 0.0784313725490196,
+          "eval_cr_k1_ci_hi": 0.14285714285714285,
+          "eval_cr_k1_ci_width": 0.06442577030812324,
+          "eval_vf_k3": 0.00047903376359573245,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "QM9",
+      "examples": [
+        {
+          "input": "Dataset: QM9 | Property: A | N molecules: 50000",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0000 CI=[0.0000,0.0000] n_pairs=136963\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=2599\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=419\nNumerical validation: PASS\n  k=1: CR 0.000000→0.000000, VF 4.41e-08→4.41e-08\n  k=2: CR 0.000000→0.000000, VF 2.18e-09→2.18e-09\n  k=3: CR 0.000000→0.000000, VF 4.80e-10→4.80e-10\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): WL-sufficient",
+          "metadata_dataset": "QM9",
+          "metadata_property": "A",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "WL-sufficient",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.0,
+          "eval_cr_k1_ci_lo": 0.0,
+          "eval_cr_k1_ci_hi": 0.0,
+          "eval_cr_k1_ci_width": 0.0,
+          "eval_vf_k3": 4.798149704686053e-10,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        },
+        {
+          "input": "Dataset: QM9 | Property: B | N molecules: 50000",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0034 CI=[0.0031,0.0037] n_pairs=136963\n  k=2: CR=0.0146 CI=[0.0104,0.0192] n_pairs=2599\n  k=3: CR=0.0334 CI=[0.0167,0.0525] n_pairs=419\nNumerical validation: PASS\n  k=1: CR 0.003380→0.003380, VF 6.26e-03→6.26e-03\n  k=2: CR 0.014621→0.014621, VF 6.20e-04→6.20e-04\n  k=3: CR 0.033413→0.033413, VF 1.49e-04→1.49e-04\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=1.0000 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): noise-dominated",
+          "metadata_dataset": "QM9",
+          "metadata_property": "B",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "noise-dominated",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.003380475018800698,
+          "eval_cr_k1_ci_lo": 0.003095544052043253,
+          "eval_cr_k1_ci_hi": 0.0036800084694406515,
+          "eval_cr_k1_ci_width": 0.0005844644173973986,
+          "eval_vf_k3": 0.00014860080904033438,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        },
+        {
+          "input": "Dataset: QM9 | Property: C | N molecules: 50000",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0080 CI=[0.0075,0.0084] n_pairs=136963\n  k=2: CR=0.0281 CI=[0.0215,0.0346] n_pairs=2599\n  k=3: CR=0.0740 CI=[0.0501,0.0979] n_pairs=419\nNumerical validation: PASS\n  k=1: CR 0.007966→0.007966, VF 4.68e-03→4.68e-03\n  k=2: CR 0.028088→0.028088, VF 7.25e-04→7.25e-04\n  k=3: CR 0.073986→0.073986, VF 2.52e-04→2.52e-04\nSignificance (null 95th):\n  CR_k1: p=1.0000 marginal\n  VF_k3: p=0.9980 marginal\nQuadrant assignments:\n  @80th pct: WL-sufficient\n  @85th pct: WL-sufficient\n  @90th pct: WL-sufficient\n  @95th pct: WL-sufficient\n  @99th pct: WL-sufficient\n  Original (median): 3D-geometry-limited",
+          "metadata_dataset": "QM9",
+          "metadata_property": "C",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.00796565495790834,
+          "eval_cr_k1_ci_lo": 0.00749819294261954,
+          "eval_cr_k1_ci_hi": 0.008403729474383592,
+          "eval_cr_k1_ci_width": 0.0009055365317640523,
+          "eval_vf_k3": 0.00025169076015140325,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 0.998,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    }
+  ]
+}

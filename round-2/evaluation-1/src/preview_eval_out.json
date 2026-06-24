@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "evaluation_name": "WL Expressiveness Floor Robustness Validation",
+    "n_bootstrap": 1000,
+    "n_permutations": 1000,
+    "rng_seed": 42,
+    "collision_sigma_factor": 0.5,
+    "reference_null_percentile": 95,
+    "alternative_percentiles": [
+      80,
+      85,
+      90
+    ],
+    "robustness_summary": {
+      "pct_80_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_85_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_90_counts": {
+        "noise-dominated": 1,
+        "WL-sufficient": 23
+      },
+      "pct_95_counts": {
+        "WL-sufficient": 24
+      },
+      "pct_99_counts": {
+        "WL-sufficient": 24
+      },
+      "jaccard_indices": {
+        "80": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "85": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "90": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 0.9583333333333334,
+            "noise-dominated": 0.0
+          },
+          "mean": 0.7395833333333334
+        },
+        "99": {
+          "per_quadrant": {
+            "WL-bottlenecked": 1.0,
+            "3D-geometry-limited": 1.0,
+            "WL-sufficient": 1.0,
+            "noise-dominated": 1.0
+          },
+          "mean": 1.0
+        }
+      },
+      "unstable_properties": {
+        "('BBBP', 'p_np')": {
+          "reference": "WL-sufficient",
+          "changes": {
+            "80": "noise-dominated",
+            "85": "noise-dominated",
+            "90": "noise-dominated"
+          }
+        }
+      },
+      "thresholds_by_percentile": {
+        "80": {
+          "cr_k1": 0.7144849338872542,
+          "vf_k3": 0.0080375222973928
+        },
+        "85": {
+          "cr_k1": 0.717948717948718,
+          "vf_k3": 0.008425088400198408
+        },
+        "90": {
+          "cr_k1": 0.7251454772456795,
+          "vf_k3": 0.014432827175518194
+        },
+        "95": {
+          "cr_k1": 0.7299931368325753,
+          "vf_k3": 0.028818718213070086
+        },
+        "99": {
+          "cr_k1": 0.7507002801120448,
+          "vf_k3": 0.04866651276698176
+        }
+      }
+    }
+  },
+  "metrics_agg": {
+    "n_properties_total": 24.0,
+    "n_numerical_validated": 24.0,
+    "numerical_validation_rate": 1.0,
+    "n_cr_k1_significant_above_null95": 0.0,
+    "n_vf_k3_significant_above_null95": 0.0,
+    "fraction_cr_significant": 0.0,
+    "fraction_vf_significant": 0.0,
+    "mean_bootstrap_ci_width_k1": 0.018185302373077458,
+    "n_properties_changing_quadrant": 1.0,
+    "fraction_stable_quadrant": 0.9583333333333334,
+    "mean_jaccard_95th_vs_80th": 0.7395833333333334,
+    "mean_jaccard_95th_vs_99th": 1.0,
+    "null_cr_k1_95th_threshold": 0.7299931368325753,
+    "null_vf_k3_95th_threshold": 0.028818718213070086,
+    "orig_cr_k1_median_threshold": 0.007611544723757511,
+    "orig_vf_k3_median_threshold": 7.474115714695203e-05,
+    "n_wl_bottlenecked_null95": 0.0,
+    "n_3d_geometry_limited_null95": 0.0,
+    "n_wl_sufficient_null95": 24.0,
+    "n_noise_dominated_null95": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "BBBP",
+      "examples": [
+        {
+          "input": "Dataset: BBBP | Property: p_np | N molecules: 2039",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.1429 CI=[0.0840,0.2101] n_pairs=119\n  k=2: CR=0.1489 CI=[0.0851,0.2128] n_pairs=94\n  k=3: CR=0.1505 CI=[0.0860,0.2258] n_pairs=93\nNumerical validation: PASS\n  k=1: CR 0.1428...",
+          "metadata_dataset": "BBBP",
+          "metadata_property": "p_np",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "False",
+          "eval_cr_k1_point": 0.14285714285714285,
+          "eval_cr_k1_ci_lo": 0.08403361344537816,
+          "eval_cr_k1_ci_hi": 0.21008403361344538,
+          "eval_cr_k1_ci_width": 0.12605042016806722,
+          "eval_vf_k3": 0.018191388755063084,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 3.0
+        }
+      ]
+    },
+    {
+      "dataset": "ESOL",
+      "examples": [
+        {
+          "input": "Dataset: ESOL | Property: measured log solubility in mols per litre | N molecules: 1128",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0916 CI=[0.0586,0.1245] n_pairs=273\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=15\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=13\nNumerical validation: PASS\n  k=1: CR 0.0915...",
+          "metadata_dataset": "ESOL",
+          "metadata_property": "measured log solubility in mols per litre",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "3D-geometry-limited",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.09157509157509157,
+          "eval_cr_k1_ci_lo": 0.05860805860805861,
+          "eval_cr_k1_ci_hi": 0.12454212454212454,
+          "eval_cr_k1_ci_width": 0.06593406593406594,
+          "eval_vf_k3": 0.00011820628653319565,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 1.0,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "FreeSolv",
+      "examples": [
+        {
+          "input": "Dataset: FreeSolv | Property: expt | N molecules: 642",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0690 CI=[0.0259,0.1121] n_pairs=116\n  k=2: CR=0.0000 CI=[0.0000,0.0000] n_pairs=3\n  k=3: CR=0.0000 CI=[0.0000,0.0000] n_pairs=3\nNumerical validation: PASS\n  k=1: CR 0.068966...",
+          "metadata_dataset": "FreeSolv",
+          "metadata_property": "expt",
+          "predict_quadrant_null95": "WL-sufficient",
+          "predict_quadrant_orig": "WL-bottlenecked",
+          "predict_quadrant_stable": "True",
+          "eval_cr_k1_point": 0.06896551724137931,
+          "eval_cr_k1_ci_lo": 0.02586206896551724,
+          "eval_cr_k1_ci_hi": 0.11206896551724138,
+          "eval_cr_k1_ci_width": 0.08620689655172414,
+          "eval_vf_k3": 1.383493664879403e-05,
+          "eval_cr_k1_p_value": 1.0,
+          "eval_vf_k3_p_value": 0.999,
+          "eval_numerical_validated": 1.0,
+          "eval_n_quadrant_changes": 0.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "thresholds": {
+    "collision_rate": 0.007611544723757511,
+    "variance_floor": 7.474115714695203e-05
+  },
+  "quadrant_descriptions": {
+    "WL-bottlenecked": "High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck \u2014 upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+    "3D-geometry-limited": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+    "WL-sufficient": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+    "noise-dominated": "Low k=1 collision rate + high k=3 variance floor. Low WL-collision signal but high residual variance \u2014 measurement noise or stochastic processes dominate prediction error."
+  },
+  "quadrants": {
+    "WL-bottlenecked": [
+      {
+        "dataset": "FreeSolv",
+        "property": "expt"
+      },
+      {
+        "dataset": "HIV",
+        "property": "HIV_active"
+      }
+    ],
+    "3D-geometry-limited": [
+      {
+        "dataset": "BBBP",
+        "property": "p_np"
+      },
+      {
+        "dataset": "ESOL",
+        "property": "measured log solubility in mols per litre"
+      },
+      {
+        "dataset": "Lipophilicity",
+        "property": "exp"
+      },
+      {
+        "dataset": "QM9",
+        "property": "C"
+      },
+      {
+        "dataset": "QM9",
+        "property": "cv"
+      },
+      {
+        "dataset": "QM9",
+        "property": "gap"
+      },
+      {
+        "dataset": "QM9",
+        "property": "homo"
+      },
+      {
+        "dataset": "QM9",
+        "property": "lumo"
+      },
+      {
+        "dataset": "QM9",
+        "property": "mu"
+      },
+      {
+        "dataset": "QM9",
+        "property": "r2"
+      }
+    ],
+    "WL-sufficient": [
+      {
+        "dataset": "QM9",
+        "property": "A"
+      },
+      {
+        "dataset": "QM9",
+        "property": "g298"
+      },
+      {
+        "dataset": "QM9",
+        "property": "g298_atom"
+      },
+      {
+        "dataset": "QM9",
+        "property": "h298"
+      },
+      {
+        "dataset": "QM9",
+        "property": "h298_atom"
+      },
+      {
+        "dataset": "QM9",
+        "property": "u0"
+      },
+      {
+        "dataset": "QM9",
+        "property": "u0_atom"
+      },
+      {
+        "dataset": "QM9",
+        "property": "u298"
+      },
+      {
+        "dataset": "QM9",
+        "property": "u298_atom"
+      },
+      {
+        "dataset": "QM9",
+        "property": "zpve"
+      }
+    ],
+    "noise-dominated": [
+      {
+        "dataset": "QM9",
+        "property": "B"
+      },
+      {
+        "dataset": "QM9",
+        "property": "alpha"
+      }
+    ]
+  },
+  "property_assignments": [
+    {
+      "dataset": "BBBP",
+      "property": "p_np",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.14285714285714285,
+      "variance_floor_k3": 0.018191388755063084,
+      "variance_floor_k1": 0.02023791999000768,
+      "variance_floor_k2": 0.018191388755063084,
+      "n_molecules": 2039,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "ESOL",
+      "property": "measured log solubility in mols per litre",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.09157509157509157,
+      "variance_floor_k3": 0.00011820628653319565,
+      "variance_floor_k1": 0.00430382547958531,
+      "variance_floor_k2": 0.0002492858664301361,
+      "n_molecules": 1128,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "FreeSolv",
+      "property": "expt",
+      "quadrant": "WL-bottlenecked",
+      "collision_rate_k1": 0.06896551724137931,
+      "variance_floor_k3": 1.383493664879403e-05,
+      "variance_floor_k1": 0.005726452030243827,
+      "variance_floor_k2": 1.383493664879403e-05,
+      "n_molecules": 642,
+      "reasoning": "High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck \u2014 upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+      "monotonic": true
+    },
+    {
+      "dataset": "HIV",
+      "property": "HIV_active",
+      "quadrant": "WL-bottlenecked",
+      "collision_rate_k1": 0.07488986784140969,
+      "variance_floor_k3": 0.0,
+      "variance_floor_k1": 0.040976184994468826,
+      "variance_floor_k2": 0.0,
+      "n_molecules": 4998,
+      "reasoning": "High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck \u2014 upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+      "monotonic": true
+    },
+    {
+      "dataset": "Lipophilicity",
+      "property": "exp",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.1092436974789916,
+      "variance_floor_k3": 0.00047903376359573245,
+      "variance_floor_k1": 0.0037371141847187504,
+      "variance_floor_k2": 0.0005844499070364195,
+      "n_molecules": 4200,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "A",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 4.798149704686053e-10,
+      "variance_floor_k1": 4.40617598879713e-08,
+      "variance_floor_k2": 2.175453233315119e-09,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "B",
+      "quadrant": "noise-dominated",
+      "collision_rate_k1": 0.003380475018800698,
+      "variance_floor_k3": 0.00014860080904033438,
+      "variance_floor_k1": 0.006256984869545578,
+      "variance_floor_k2": 0.0006196080543510111,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + high k=3 variance floor. Low WL-collision signal but high residual variance \u2014 measurement noise or stochastic processes dominate prediction error.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "C",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.00796565495790834,
+      "variance_floor_k3": 0.00025169076015140325,
+      "variance_floor_k1": 0.004683395976192137,
+      "variance_floor_k2": 0.0007247507723334804,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "alpha",
+      "quadrant": "noise-dominated",
+      "collision_rate_k1": 0.007257434489606682,
+      "variance_floor_k3": 0.00011597970539420054,
+      "variance_floor_k1": 0.007107812361648485,
+      "variance_floor_k2": 0.00045725738994352607,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + high k=3 variance floor. Low WL-collision signal but high residual variance \u2014 measurement noise or stochastic processes dominate prediction error.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "cv",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.15891153085139784,
+      "variance_floor_k3": 0.0010687857358883692,
+      "variance_floor_k1": 0.020183663468735753,
+      "variance_floor_k2": 0.003792497185421971,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "g298",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 1.8206516421982705e-09,
+      "variance_floor_k1": 7.63438393653462e-08,
+      "variance_floor_k2": 8.615856326936511e-09,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "g298_atom",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.00010221738717755891,
+      "variance_floor_k3": 3.3502608899703525e-05,
+      "variance_floor_k1": 0.001404836451344062,
+      "variance_floor_k2": 0.00015854414879108396,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "gap",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.16363543438738928,
+      "variance_floor_k3": 0.0008359519824104476,
+      "variance_floor_k1": 0.038615701389095515,
+      "variance_floor_k2": 0.003247377267344109,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "h298",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 2.0160342536835025e-09,
+      "variance_floor_k1": 7.977065318934533e-08,
+      "variance_floor_k2": 9.318833868771191e-09,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "h298_atom",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 2.190372582376262e-05,
+      "variance_floor_k3": 3.062841322871214e-05,
+      "variance_floor_k1": 0.0012119082426025245,
+      "variance_floor_k2": 0.0001415755183826924,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "homo",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.2655534706453568,
+      "variance_floor_k3": 0.001689931668730922,
+      "variance_floor_k1": 0.04998244691283483,
+      "variance_floor_k2": 0.006213410689730537,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "lumo",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.0744434628330279,
+      "variance_floor_k3": 0.0002778559548207933,
+      "variance_floor_k1": 0.026268049075070576,
+      "variance_floor_k2": 0.0010983235642926415,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "mu",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.2672181538079627,
+      "variance_floor_k3": 0.0016366822129185634,
+      "variance_floor_k1": 0.14686374804013494,
+      "variance_floor_k2": 0.006537544732029256,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "r2",
+      "quadrant": "3D-geometry-limited",
+      "collision_rate_k1": 0.316771682863255,
+      "variance_floor_k3": 0.003001465795167388,
+      "variance_floor_k1": 0.08685860791070271,
+      "variance_floor_k2": 0.011224935862759983,
+      "n_molecules": 50000,
+      "reasoning": "High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates \u2014 graph topology alone is insufficient.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "u0",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 1.9449547894818185e-09,
+      "variance_floor_k1": 7.853134484743716e-08,
+      "variance_floor_k2": 9.055825538326812e-09,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "u0_atom",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 2.190372582376262e-05,
+      "variance_floor_k3": 3.0475836500465906e-05,
+      "variance_floor_k1": 0.0012305213667041317,
+      "variance_floor_k2": 0.0001418973129736141,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "u298",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 2.0160326280649467e-09,
+      "variance_floor_k1": 7.977063402118832e-08,
+      "variance_floor_k2": 9.318827778236658e-09,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "u298_atom",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 2.190372582376262e-05,
+      "variance_floor_k3": 3.1040595902196695e-05,
+      "variance_floor_k1": 0.0012282182247668751,
+      "variance_floor_k2": 0.00014348079655041108,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    },
+    {
+      "dataset": "QM9",
+      "property": "zpve",
+      "quadrant": "WL-sufficient",
+      "collision_rate_k1": 0.0,
+      "variance_floor_k3": 1.8618772322122356e-05,
+      "variance_floor_k1": 0.0004022211532563291,
+      "variance_floor_k2": 6.875136328186917e-05,
+      "n_molecules": 50000,
+      "reasoning": "Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+      "monotonic": true
+    }
+  ]
+}

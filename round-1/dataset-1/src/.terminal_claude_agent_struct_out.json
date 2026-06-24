@@ -1,0 +1,20 @@
+{
+  "title": "QM9 and MoleculeNet Molecular Datasets",
+  "layman_summary": "Collected five well-known molecular property datasets (QM9 quantum properties, HIV activity, solubility, blood-brain barrier, and toxicity) with SMILES strings and labels ready for graph neural network expressiveness experiments.",
+  "summary": "Five molecular property benchmark datasets prepared for Weisfeiler-Leman (WL) GNN expressiveness analysis, totalling 102,125 molecules with SMILES strings and labeled properties:\n\n1. **QM9_Properties** (50,000 molecules, multi-target regression): Quantum-mechanical properties (HOMO energy, LUMO energy, HOMO-LUMO gap, dipole moment, polarizability) from the canonical QM9 dataset (Ramakrishnan et al. 2014, Scientific Data). Source: n0w0f/qm9-csv (HuggingFace, 741 downloads). THE standard GNN expressiveness benchmark used in GIN, MPNN, SchNet, DimeNet papers.\n\n2. **MoleculeNet_HIV** (41,127 molecules, binary classification): HIV replication inhibition. Included in the Open Graph Benchmark (OGB) as ogbg-molhiv — the go-to large-scale molecular GNN benchmark. Source: scikit-fingerprints/MoleculeNet_HIV (HuggingFace, 1,569 downloads, graph-ml tagged).\n\n3. **MoleculeNet_ESOL** (1,128 molecules, regression): Aqueous solubility (log Mol/L) from Delaney 2004. The most-cited small-molecule regression benchmark in GNN papers. Source: scikit-fingerprints/MoleculeNet_ESOL (HuggingFace, 2,446 downloads, graph-ml tagged).\n\n4. **MoleculeNet_BBBP** (2,039 molecules, binary classification): Blood-brain barrier penetration for drug-like molecules. Standard binary classification MoleculeNet benchmark used in GNN expressiveness comparisons. Source: scikit-fingerprints/MoleculeNet_BBBP (HuggingFace, 2,206 downloads, graph-ml tagged).\n\n5. **MoleculeNet_Tox21** (7,831 molecules, multi-label classification): 12 toxicity targets covering nuclear receptors and stress response pathways. Tests expressiveness across diverse multi-task molecular classification. Source: scikit-fingerprints/MoleculeNet_Tox21 (HuggingFace, 1,826 downloads, graph-ml tagged).\n\nAll examples use SMILES as input (the molecular graph string representation) and JSON-encoded property labels as output, with metadata fields for task type, label names, and row index. Format validated against exp_sel_data_out schema. Full dataset: 39.9MB (well under 100MB limit).",
+  "out_expected_files": {
+    "script": "data.py",
+    "datasets": [
+      {
+        "full": ["full_data_out.json"],
+        "mini": "mini_data_out.json",
+        "preview": "preview_data_out.json"
+      }
+    ]
+  },
+  "upload_ignore_regexes": [
+    "(^|/)temp/",
+    "(^|/)\\.venv/",
+    "(^|/)logs/"
+  ]
+}
