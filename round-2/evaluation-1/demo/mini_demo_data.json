@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "evaluation_name": "WL Expressiveness Floor Robustness Validation",
+    "n_bootstrap": 100,
+    "n_permutations": 100,
+    "rng_seed": 42,
+    "collision_sigma_factor": 0.5,
+    "reference_null_percentile": 95,
+    "alternative_percentiles": [80, 85, 90, 99],
+    "robustness_summary": {
+      "pct_80_counts": {"noise-dominated": 1, "WL-sufficient": 23},
+      "pct_95_counts": {"WL-sufficient": 24},
+      "pct_99_counts": {"WL-sufficient": 24},
+      "jaccard_indices": {
+        "80": {"per_quadrant": {"WL-sufficient": 0.96, "noise-dominated": 0.0}, "mean": 0.74},
+        "99": {"per_quadrant": {"WL-sufficient": 1.0, "noise-dominated": 1.0}, "mean": 1.0}
+      },
+      "unstable_properties": {
+        "('BBBP', 'p_np')": {
+          "reference": "WL-sufficient",
+          "changes": {"80": "noise-dominated", "85": "noise-dominated", "90": "noise-dominated"}
+        }
+      },
+      "thresholds_by_percentile": {
+        "80": {"cr_k1": 0.7145, "vf_k3": 0.00804},
+        "95": {"cr_k1": 0.7300, "vf_k3": 0.0288},
+        "99": {"cr_k1": 0.7507, "vf_k3": 0.0487}
+      }
+    }
+  },
+  "metrics_agg": {
+    "n_properties_total": 24.0,
+    "n_numerical_validated": 24.0,
+    "numerical_validation_rate": 1.0,
+    "n_cr_k1_significant_above_null95": 0.0,
+    "fraction_cr_significant": 0.0,
+    "mean_bootstrap_ci_width_k1": 0.0182,
+    "n_properties_changing_quadrant": 1.0,
+    "fraction_stable_quadrant": 0.9583,
+    "mean_jaccard_95th_vs_80th": 0.7396,
+    "mean_jaccard_95th_vs_99th": 1.0,
+    "null_cr_k1_95th_threshold": 0.7300,
+    "null_vf_k3_95th_threshold": 0.0288,
+    "n_wl_sufficient_null95": 24.0,
+    "n_noise_dominated_null95": 0.0
+  },
+  "datasets": [
+    {
+      "dataset": "BBBP",
+      "examples": [
+        {
+          "input": "Dataset: BBBP | Property: p_np | N molecules: 2039",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.1429 CI=[0.0840,0.2101] n_pairs=119\nQuadrant assignments:\n  @95th pct: WL-sufficient\nSignificance: CR p=1.0000 (marginal)",
+          "metadata_dataset": "BBBP",
+          "metadata_property": "p_np",
+          "predict_quadrant_null95": "WL-sufficient",
+          "eval_cr_k1_point": 0.143,
+          "eval_cr_k1_ci_lo": 0.084,
+          "eval_cr_k1_ci_hi": 0.210,
+          "eval_vf_k3": 0.0182,
+          "eval_numerical_validated": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "ESOL",
+      "examples": [
+        {
+          "input": "Dataset: ESOL | Property: measured log solubility | N molecules: 1128",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0916 CI=[0.0586,0.1245] n_pairs=273\nQuadrant assignments:\n  @95th pct: WL-sufficient\nSignificance: CR p=1.0000 (marginal)",
+          "metadata_dataset": "ESOL",
+          "metadata_property": "measured log solubility in mols per litre",
+          "predict_quadrant_null95": "WL-sufficient",
+          "eval_cr_k1_point": 0.0916,
+          "eval_cr_k1_ci_lo": 0.0586,
+          "eval_cr_k1_ci_hi": 0.1245,
+          "eval_vf_k3": 0.000118,
+          "eval_numerical_validated": 1.0
+        }
+      ]
+    },
+    {
+      "dataset": "QM9",
+      "examples": [
+        {
+          "input": "Dataset: QM9 | Property: A | N molecules: 50000",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0000 CI=[0.0000,0.0000] n_pairs=136963\nQuadrant assignments:\n  @95th pct: WL-sufficient\nSignificance: CR p=1.0000 (marginal)",
+          "metadata_dataset": "QM9",
+          "metadata_property": "A",
+          "predict_quadrant_null95": "WL-sufficient",
+          "eval_cr_k1_point": 0.0,
+          "eval_cr_k1_ci_lo": 0.0,
+          "eval_cr_k1_ci_hi": 0.0,
+          "eval_vf_k3": 4.8e-10,
+          "eval_numerical_validated": 1.0
+        },
+        {
+          "input": "Dataset: QM9 | Property: B | N molecules: 50000",
+          "output": "Bootstrap CIs:\n  k=1: CR=0.0034 CI=[0.0031,0.0037] n_pairs=136963\nQuadrant assignments:\n  @95th pct: WL-sufficient\nSignificance: CR p=1.0000 (marginal)",
+          "metadata_dataset": "QM9",
+          "metadata_property": "B",
+          "predict_quadrant_null95": "WL-sufficient",
+          "eval_cr_k1_point": 0.00338,
+          "eval_cr_k1_ci_lo": 0.00310,
+          "eval_cr_k1_ci_hi": 0.00368,
+          "eval_vf_k3": 0.000149,
+          "eval_numerical_validated": 1.0
+        }
+      ]
+    }
+  ]
+}

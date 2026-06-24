@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "method_name": "WL Expressiveness Floor Analysis",
+    "description": "Computes k-WL (k=1,2,3) certificates for molecular graphs, measures collision rates and conditional variance (Bayes error floor), and assigns each (dataset, property) pair to a 2×2 typology quadrant.",
+    "thresholds": {
+      "collision_rate": 0.007611544723757511,
+      "variance_floor": 7.474115714695203e-05
+    },
+    "quadrant_counts": {
+      "WL-bottlenecked": 2,
+      "3D-geometry-limited": 10,
+      "WL-sufficient": 10,
+      "noise-dominated": 2
+    },
+    "total_properties": 24
+  },
+  "datasets": [
+    {
+      "dataset": "BBBP",
+      "examples": [
+        {
+          "input": "Dataset: BBBP | Property: p_np | N molecules: 2039 | Total variance: 0.1797 | Std: 0.4239",
+          "output": "Typology: 3D-geometry-limited\nk=1: collision_rate=0.1429, variance_floor=0.0202\nk=2: collision_rate=0.1489, variance_floor=0.0182\nk=3: collision_rate=0.1505, variance_floor=0.0182\nReasoning: High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates — graph topology alone is insufficient.",
+          "predict_quadrant": "3D-geometry-limited",
+          "predict_collision_rate_k1": "0.142857",
+          "predict_variance_floor_k1": "0.020238",
+          "predict_variance_floor_k2": "0.018191",
+          "predict_variance_floor_k3": "0.018191",
+          "predict_n_molecules": "2039",
+          "predict_monotonic": "True",
+          "metadata_dataset": "BBBP",
+          "metadata_property": "p_np"
+        }
+      ]
+    },
+    {
+      "dataset": "ESOL",
+      "examples": [
+        {
+          "input": "Dataset: ESOL | Property: measured log solubility in mols per litre | N molecules: 1128 | Total variance: 4.3912 | Std: 2.0955",
+          "output": "Typology: 3D-geometry-limited\nk=1: collision_rate=0.0916, variance_floor=0.0043\nk=2: collision_rate=0.0000, variance_floor=0.0002\nk=3: collision_rate=0.0000, variance_floor=0.0001\nReasoning: High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates — graph topology alone is insufficient.",
+          "predict_quadrant": "3D-geometry-limited",
+          "predict_collision_rate_k1": "0.091575",
+          "predict_variance_floor_k1": "0.004304",
+          "predict_variance_floor_k2": "0.000249",
+          "predict_variance_floor_k3": "0.000118",
+          "predict_n_molecules": "1128",
+          "predict_monotonic": "True",
+          "metadata_dataset": "ESOL",
+          "metadata_property": "measured log solubility in mols per litre"
+        }
+      ]
+    },
+    {
+      "dataset": "FreeSolv",
+      "examples": [
+        {
+          "input": "Dataset: FreeSolv | Property: expt | N molecules: 642 | Total variance: 14.7827 | Std: 3.8448",
+          "output": "Typology: WL-bottlenecked\nk=1: collision_rate=0.0690, variance_floor=0.0057\nk=2: collision_rate=0.0000, variance_floor=0.0000\nk=3: collision_rate=0.0000, variance_floor=0.0000\nReasoning: High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck — upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+          "predict_quadrant": "WL-bottlenecked",
+          "predict_collision_rate_k1": "0.068966",
+          "predict_variance_floor_k1": "0.005726",
+          "predict_variance_floor_k2": "0.000014",
+          "predict_variance_floor_k3": "0.000014",
+          "predict_n_molecules": "642",
+          "predict_monotonic": "True",
+          "metadata_dataset": "FreeSolv",
+          "metadata_property": "expt"
+        }
+      ]
+    },
+    {
+      "dataset": "HIV",
+      "examples": [
+        {
+          "input": "Dataset: HIV | Property: HIV_active | N molecules: 4998 | Total variance: 0.0356 | Std: 0.1888",
+          "output": "Typology: WL-bottlenecked\nk=1: collision_rate=0.0749, variance_floor=0.0410\nk=2: collision_rate=0.0000, variance_floor=0.0000\nk=3: collision_rate=0.0000, variance_floor=0.0000\nReasoning: High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck — upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+          "predict_quadrant": "WL-bottlenecked",
+          "predict_collision_rate_k1": "0.074890",
+          "predict_variance_floor_k1": "0.040976",
+          "predict_variance_floor_k2": "0.000000",
+          "predict_variance_floor_k3": "0.000000",
+          "predict_n_molecules": "4998",
+          "predict_monotonic": "True",
+          "metadata_dataset": "HIV",
+          "metadata_property": "HIV_active"
+        }
+      ]
+    },
+    {
+      "dataset": "Lipophilicity",
+      "examples": [
+        {
+          "input": "Dataset: Lipophilicity | Property: exp | N molecules: 4200 | Total variance: 1.4469 | Std: 1.2029",
+          "output": "Typology: 3D-geometry-limited\nk=1: collision_rate=0.1092, variance_floor=0.0037\nk=2: collision_rate=0.0244, variance_floor=0.0006\nk=3: collision_rate=0.0171, variance_floor=0.0005\nReasoning: High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates — graph topology alone is insufficient.",
+          "predict_quadrant": "3D-geometry-limited",
+          "predict_collision_rate_k1": "0.109244",
+          "predict_variance_floor_k1": "0.003737",
+          "predict_variance_floor_k2": "0.000584",
+          "predict_variance_floor_k3": "0.000479",
+          "predict_n_molecules": "4200",
+          "predict_monotonic": "True",
+          "metadata_dataset": "Lipophilicity",
+          "metadata_property": "exp"
+        }
+      ]
+    },
+    {
+      "dataset": "QM9",
+      "examples": [
+        {
+          "input": "Dataset: QM9 | Property: A | N molecules: 50000 | Total variance: 8766963.8712 | Std: 2960.9059",
+          "output": "Typology: WL-sufficient\nk=1: collision_rate=0.0000, variance_floor=0.0000\nk=2: collision_rate=0.0000, variance_floor=0.0000\nk=3: collision_rate=0.0000, variance_floor=0.0000\nReasoning: Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+          "predict_quadrant": "WL-sufficient",
+          "predict_collision_rate_k1": "0.000000",
+          "predict_variance_floor_k1": "0.000000",
+          "predict_variance_floor_k2": "0.000000",
+          "predict_variance_floor_k3": "0.000000",
+          "predict_n_molecules": "50000",
+          "predict_monotonic": "True",
+          "metadata_dataset": "QM9",
+          "metadata_property": "A"
+        },
+        {
+          "input": "Dataset: QM9 | Property: B | N molecules: 50000 | Total variance: 6.4398 | Std: 2.5377",
+          "output": "Typology: noise-dominated\nk=1: collision_rate=0.0034, variance_floor=0.0063\nk=2: collision_rate=0.0146, variance_floor=0.0006\nk=3: collision_rate=0.0334, variance_floor=0.0001\nReasoning: Low k=1 collision rate + high k=3 variance floor. Low WL-collision signal but high residual variance — measurement noise or stochastic processes dominate prediction error.",
+          "predict_quadrant": "noise-dominated",
+          "predict_collision_rate_k1": "0.003380",
+          "predict_variance_floor_k1": "0.006257",
+          "predict_variance_floor_k2": "0.000620",
+          "predict_variance_floor_k3": "0.000149",
+          "predict_n_molecules": "50000",
+          "predict_monotonic": "True",
+          "metadata_dataset": "QM9",
+          "metadata_property": "B"
+        },
+        {
+          "input": "Dataset: QM9 | Property: C | N molecules: 50000 | Total variance: 3.0749 | Std: 1.7535",
+          "output": "Typology: 3D-geometry-limited\nk=1: collision_rate=0.0080, variance_floor=0.0047\nk=2: collision_rate=0.0281, variance_floor=0.0007\nk=3: collision_rate=0.0740, variance_floor=0.0003\nReasoning: High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates — graph topology alone is insufficient.",
+          "predict_quadrant": "3D-geometry-limited",
+          "predict_collision_rate_k1": "0.007966",
+          "predict_variance_floor_k1": "0.004683",
+          "predict_variance_floor_k2": "0.000725",
+          "predict_variance_floor_k3": "0.000252",
+          "predict_n_molecules": "50000",
+          "predict_monotonic": "True",
+          "metadata_dataset": "QM9",
+          "metadata_property": "C"
+        }
+      ]
+    },
+    {
+      "dataset": "typology_summary",
+      "examples": [
+        {
+          "input": "Typology quadrant: 3D-geometry-limited | Count: 10 | Description: High k=1 collision rate + high k=3 variance floor. Collisions persist even at k=3; irreducible variance from 3D geometry dominates — graph topology alone is insufficient.",
+          "output": "Properties in this quadrant (10 total): BBBP/p_np, ESOL/measured log solubility in mols per litre, Lipophilicity/exp, QM9/C, QM9/cv...",
+          "predict_quadrant": "3D-geometry-limited",
+          "predict_count": "10"
+        },
+        {
+          "input": "Typology quadrant: WL-bottlenecked | Count: 2 | Description: High k=1 collision rate + low k=3 variance floor. WL expressiveness is the bottleneck — upgrading from 1-WL to higher-k GNNs should yield >10% relative error reduction.",
+          "output": "Properties in this quadrant (2 total): FreeSolv/expt, HIV/HIV_active",
+          "predict_quadrant": "WL-bottlenecked",
+          "predict_count": "2"
+        },
+        {
+          "input": "Typology quadrant: WL-sufficient | Count: 10 | Description: Low k=1 collision rate + low k=3 variance floor. 1-WL GINs are already near-optimal; minimal improvement expected from higher-k GNNs.",
+          "output": "Properties in this quadrant (10 total): QM9/A, QM9/g298, QM9/g298_atom, QM9/h298, QM9/h298_atom...",
+          "predict_quadrant": "WL-sufficient",
+          "predict_count": "10"
+        }
+      ]
+    }
+  ]
+}
