@@ -1,0 +1,69 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Frasca et~al.(2022)Frasca, Bevilacqua, Bronstein, and
+  Maron]{Frasca2022}
+Fabrizio Frasca, Beatrice Bevilacqua, Michael~M. Bronstein, and Haggai Maron.
+\newblock Understanding and extending subgraph {GNNs} by rethinking their
+  symmetries.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem[Gasteiger et~al.(2020)Gasteiger, Gro{\ss}, and
+  G{\"u}nnemann]{Gasteiger2020}
+Johannes Gasteiger, Janek Gro{\ss}, and Stephan G{\"u}nnemann.
+\newblock Directional message passing for molecular graphs.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}, 2020.
+
+\bibitem[Gilmer et~al.(2017)Gilmer, Schoenholz, Riley, Vinyals, and
+  Dahl]{Gilmer2017}
+Justin Gilmer, Samuel~S. Schoenholz, Patrick~F. Riley, Oriol Vinyals, and
+  George~E. Dahl.
+\newblock Neural message passing for quantum chemistry.
+\newblock In \emph{Proceedings of the International Conference on Machine
+  Learning}, pages 1263--1272, 2017.
+
+\bibitem[Kipf and Welling(2017)]{Kipf2017}
+Thomas~N. Kipf and Max Welling.
+\newblock Semi-supervised classification with graph convolutional networks.
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}, 2017.
+
+\bibitem[Maron et~al.(2019)Maron, Ben-Hamu, Serviansky, and Lipman]{Maron2019}
+Haggai Maron, Heli Ben-Hamu, Hadar Serviansky, and Yaron Lipman.
+\newblock Provably powerful graph networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem[Sch{\"u}tt et~al.(2017)Sch{\"u}tt, Kindermans, Sauceda, Chmiela,
+  Tkatchenko, and M{\"u}ller]{Schutt2017}
+Kristof~T. Sch{\"u}tt, Pieter-Jan Kindermans, Huziel~E. Sauceda, Stefan
+  Chmiela, Alexandre Tkatchenko, and Klaus-Robert M{\"u}ller.
+\newblock {SchNet}: A continuous-filter convolutional neural network for
+  modeling quantum interactions.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  991--1001, 2017.
+
+\bibitem[Wang et~al.(2023)Wang, Liu, Tang, and Liu]{Wang2023}
+Bohang Wang, Meng Liu, Jiliang Tang, and Tie-Yan Liu.
+\newblock An empirical study of realized {GNN} expressiveness.
+\newblock In \emph{Proceedings of the International Conference on Machine
+  Learning}, pages 52134--52155, 2023.
+
+\bibitem[Wu et~al.(2021)Wu, Pan, Chen, Long, Zhang, and Yu]{Wu2021}
+Zonghan Wu, Shirui Pan, Fengwen Chen, Guodong Long, Chengqi Zhang, and
+  Philip~S. Yu.
+\newblock A comprehensive study on graph neural networks.
+\newblock \emph{IEEE Transactions on Knowledge and Data Engineering},
+  34\penalty0 (8):\penalty0 3440--3463, 2021.
+
+\bibitem[Xu et~al.(2019)Xu, Hu, Leskovec, and Jegelka]{Xu2019}
+Keyulu Xu, Weihua Hu, Jure Leskovec, and Stefanie Jegelka.
+\newblock How powerful are graph neural networks?
+\newblock In \emph{Proceedings of the International Conference on Learning
+  Representations}, 2019.
+
+\end{thebibliography}

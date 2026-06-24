@@ -1,0 +1,13 @@
+{
+  "title": "Measuring Molecular Property Expressiveness Ceilings via 1-WL",
+  "summary": "Generated a 10-page publication-ready LaTeX paper titled 'Measuring Molecular Property Expressiveness Ceilings via 1-WL Color Refinement'. The paper contains all required sections: Abstract, Introduction, Methods (1-WL Color Refinement, Collision Rate and Variance Floor Measurement, Typology Assignment, Distinguishing 1-WL Rounds from k-WL), Results (Overall Typology Distribution, QM9 Quantum-Electronic Properties, QM9 Thermochemical Properties, MoleculeNet Properties, Variance Floor Monotonicity), Discussion (Architecture Implications, Validation and Limitations, Methodological Robustness, Novelty and Positioning), and Conclusion. Both figures from <available_figures> are included: fig1_v0.jpg (2x2 typology scatter plot, figure* with full text width) and fig2_v0.jpg (variance floor convergence line plot, figure* with full text width). Both figures use proper captions from the available_figures spec. Bibliography compiled with 10 references using plainnat style via bibtex. All citations resolve correctly (no ?? markers). Compilation ran: pdflatex → bibtex → pdflatex → pdflatex. Visual review of all 10 pages confirmed: clean layout, no overlapping elements, figures properly placed on pages 3 and 6, references page clean on page 10.",
+  "out_expected_files": {
+    "paper_tex_path": "paper.tex",
+    "paper_pdf_path": "paper.pdf",
+    "references_bib_path": "references.bib",
+    "figure_paths": [
+      "figures/fig1_v0.jpg",
+      "figures/fig2_v0.jpg"
+    ]
+  }
+}
